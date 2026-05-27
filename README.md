@@ -21,3 +21,9 @@
 
 ### Day 1
 - Implemented ALU and self-checking testbench
+
+### Day 2
+- Implemented RV32I register file
+- Added self-checking register file testbench
+- Implemented synchronous writes and combinational reads
+- Added x0 protection logic
