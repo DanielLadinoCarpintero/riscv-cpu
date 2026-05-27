@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/danie/Downloads/Digital Design EEL4712 Labs/lab-6-DanielLadinoCarpintero
+valu
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1779842450
+!i10b 1
+!s100 6n1^z7WMK^?7zVC9`>FY33
+I7XHob5@HCM2BHcJ4K7O2>2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s105 alu_sv_unit
+S1
+Z2 dC:/Users/danie/Downloads/riscv-cpu
+w1779842290
+8C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1779842450.000000
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv|
+!i113 1
+Z4 o-work work -sv
+Z5 tCvgOpt 0
+valu_tb
+R0
+!s110 1779842451
+!i10b 1
+!s100 Fm3?QOQhEKS4bcaeROig23
+IBoo8l?;^>KME[aI0Ug6HK0
+R1
+!s105 alu_tb_sv_unit
+S1
+R2
+w1779842363
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1779842451.000000
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv|
+!i113 1
+R4
+R5
