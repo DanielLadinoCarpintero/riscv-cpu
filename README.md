@@ -27,3 +27,10 @@
 - Added self-checking register file testbench
 - Implemented synchronous writes and combinational reads
 - Added x0 protection logic
+
+### Day 3
+- Implemented Program Counter (PC)
+- Added self-checking PC testbench
+- Implemented instruction memory module
+- Added instruction fetch verification testbench
+- Loaded initial RV32I test instructions into memory
