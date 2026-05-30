@@ -14,6 +14,11 @@ module cpu_top (
 
     logic [31:0] instruction;
 
+    // IF/ID Pipeline Signals
+
+    logic [31:0] id_pc;
+    logic [31:0] id_instruction;
+
     // Instruction Fields
 
     logic [6:0] opcode;
@@ -64,12 +69,12 @@ module cpu_top (
 
     // Instruction Field Extraction
 
-    assign opcode = instruction[6:0];
-    assign rd     = instruction[11:7];
-    assign funct3 = instruction[14:12];
-    assign rs1    = instruction[19:15];
-    assign rs2    = instruction[24:20];
-    assign funct7 = instruction[31:25];
+    assign opcode = id_instruction[6:0];
+    assign rd     = id_instruction[11:7];
+    assign funct3 = id_instruction[14:12];
+    assign rs1    = id_instruction[19:15];
+    assign rs2    = id_instruction[24:20];
+    assign funct7 = id_instruction[31:25];
 
     // ALU Source Mux
 
@@ -96,6 +101,21 @@ module cpu_top (
         .instruction(instruction)
     );
 
+    // IF/ID Pipeline Register
+
+    if_id if_id_inst (
+
+        .clk(clk),
+        .rst(rst),
+
+        .if_pc(current_pc),
+        .if_instruction(instruction),
+
+        .id_pc(id_pc),
+        .id_instruction(id_instruction)
+
+    );
+
     // Register File
 
     regfile regfile_inst (
@@ -118,7 +138,7 @@ module cpu_top (
     // Immediate Generator
 
     imm_gen imm_gen_inst (
-        .instruction(instruction),
+        .instruction(id_instruction),
         .immediate(immediate)
     );
 
