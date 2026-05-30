@@ -52,6 +52,12 @@ module cpu_top (
 
     logic zero;
 
+    // Data Memory Signals
+
+    logic [31:0] mem_read_data;
+
+    logic [31:0] writeback_data;
+
     // PC Increment
 
     assign next_pc = current_pc + 32'd4;
@@ -68,6 +74,11 @@ module cpu_top (
     // ALU Source Mux
 
     assign alu_b = (alu_src) ? immediate : rs2_data;
+
+    // Writeback Mux
+
+    assign writeback_data =
+        (mem_to_reg) ? mem_read_data : alu_result;
 
     // Program Counter
 
@@ -98,7 +109,7 @@ module cpu_top (
 
         .rd_addr(rd),
 
-        .rd_data(alu_result),
+        .rd_data(writeback_data),
 
         .rs1_data(rs1_data),
         .rs2_data(rs2_data)
@@ -145,6 +156,23 @@ module cpu_top (
 
         .result(alu_result),
         .zero(zero)
+    );
+
+    // Data Memory
+
+    data_mem data_mem_inst (
+
+        .clk(clk),
+
+        .mem_read(mem_read),
+        .mem_write(mem_write),
+
+        .addr(alu_result),
+
+        .write_data(rs2_data),
+
+        .read_data(mem_read_data)
+
     );
 
 endmodule
