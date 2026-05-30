@@ -34,3 +34,9 @@
 - Implemented instruction memory module
 - Added instruction fetch verification testbench
 - Loaded initial RV32I test instructions into memory
+
+### Day 4
+- Implemented RV32I control unit
+- Added instruction decode logic
+- Implemented immediate generator
+- Added self-checking verification testbenches
