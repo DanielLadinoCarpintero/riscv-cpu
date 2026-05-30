@@ -29,22 +29,29 @@ module cpu_tb;
 
         // Run Program
 
-        #100;
+        #150;
 
         // Check Results
 
-        if (dut.regfile_inst.registers[1] !== 32'd5) begin
+        if (dut.regfile_inst.registers[1] !== 32'd100) begin
             $display("ERROR: x1 incorrect");
             $fatal;
         end
 
-        if (dut.regfile_inst.registers[2] !== 32'd10) begin
+        if (dut.regfile_inst.registers[2] !== 32'd42) begin
             $display("ERROR: x2 incorrect");
             $fatal;
         end
 
-        if (dut.regfile_inst.registers[3] !== 32'd15) begin
+        if (dut.regfile_inst.registers[3] !== 32'd42) begin
             $display("ERROR: x3 incorrect");
+            $fatal;
+        end
+
+        // Verify memory contents
+
+        if (dut.data_mem_inst.memory[25] !== 32'd42) begin
+            $display("ERROR: Memory write failed");
             $fatal;
         end
 
@@ -53,6 +60,7 @@ module cpu_tb;
         $display("x1 = %0d", dut.regfile_inst.registers[1]);
         $display("x2 = %0d", dut.regfile_inst.registers[2]);
         $display("x3 = %0d", dut.regfile_inst.registers[3]);
+        $display("MEM[100] = %0d", dut.data_mem_inst.memory[25]);
         $display("====================================");
 
         $stop;
