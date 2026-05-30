@@ -46,3 +46,7 @@
 - Added top-level CPU module
 - Connected instruction fetch, decode, and execute stages
 - Integrated single-cycle CPU datapath and executed first RV32I program
+
+## RTL Architecture
+
+![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.png)
