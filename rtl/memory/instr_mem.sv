@@ -7,27 +7,34 @@ module instr_mem (
 );
 
     // 256 x 32-bit instruction memory
+
     logic [31:0] memory [0:255];
 
     initial begin
 
-        // Example program
+        // ADDI x1, x0, 100
+        // x1 = 100
+        memory[0] = 32'h06400093;
 
-        // ADDI x1, x0, 5
-        memory[0] = 32'h00500093;
+        // ADDI x2, x0, 42
+        // x2 = 42
+        memory[1] = 32'h02A00113;
 
-        // ADDI x2, x0, 10
-        memory[1] = 32'h00A00113;
+        // SW x2, 0(x1)
+        // MEM[100] = 42
+        memory[2] = 32'h0020A023;
 
-        // ADD x3, x1, x2
-        memory[2] = 32'h002081B3;
+        // LW x3, 0(x1)
+        // x3 = MEM[100]
+        memory[3] = 32'h0000A183;
 
         // NOP
-        memory[3] = 32'h00000013;
+        memory[4] = 32'h00000013;
 
     end
 
     // Word-aligned instruction fetch
+
     assign instruction = memory[addr[31:2]];
 
 endmodule
