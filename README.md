@@ -111,6 +111,10 @@ In Active Development
 
 ![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.jpg)
 
+### Updated Single-Cycle CPU Datapath
+
+![Updated Single Cycle Datapath](docs/diagrams/single_cycle_cpu_with_memory.jpg)
+
 ---
 
 ## Verification Waveforms
