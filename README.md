@@ -40,3 +40,9 @@
 - Added instruction decode logic
 - Implemented immediate generator
 - Added self-checking verification testbenches
+
+### Day 5
+- Implemented ALU control unit
+- Added top-level CPU module
+- Connected instruction fetch, decode, and execute stages
+- Integrated single-cycle CPU datapath and executed first RV32I program
