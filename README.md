@@ -50,3 +50,33 @@
 ## RTL Architecture
 
 ![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.jpg)
+
+## Verification Waveforms
+
+### ALU Testbench
+
+![ALU Waveform](docs/waveforms/alu.jpg)
+
+### Control Unit Testbench
+
+![Control Unit Waveform](docs/waveforms/control_unit.jpg)
+
+### CPU Execution
+
+![CPU Execution](docs/waveforms/cpu.jpg)
+
+### Immediate Generator Testbench
+
+![IMM_GEN Waveform](docs/waveforms/imm_gen.jpg)
+
+### Instruction Memory Testbench
+
+![Instruction Memory Waveform](docs/waveforms/instr_mem.jpg)
+
+### Program Counter Testbench
+
+![PC Waveform](docs/waveforms/pc.jpg)
+
+### Register File Testbench
+
+![Register File Waveform](docs/waveforms/register.jpg)
