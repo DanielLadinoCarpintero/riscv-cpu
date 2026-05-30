@@ -49,4 +49,4 @@
 
 ## RTL Architecture
 
-![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.png)
+![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.jpg)
