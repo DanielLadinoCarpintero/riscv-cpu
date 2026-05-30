@@ -69,6 +69,12 @@ In Active Development
 - Successfully executed LW/SW memory operations
 - Verified full single-cycle RV32I processor execution
 
+### Day 7
+- Began pipelined CPU architecture
+- Implemented IF/ID pipeline register
+- Added staged instruction transfer between IF and ID stages
+- Added self-checking IF/ID pipeline register testbench
+
 ---
 
 ## Current Supported Instructions
