@@ -81,6 +81,11 @@ In Active Development
 - Separated decode and execute stages
 - Added self-checking ID/EX pipeline verification
 
+### Day 9
+- Implemented EX/MEM pipeline register
+- Added pipelined memory-stage signal propagation
+- Separated execute and memory stages
+- Added self-checking EX/MEM pipeline verification
 ---
 
 ## Current Supported Instructions
