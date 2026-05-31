@@ -75,6 +75,12 @@ In Active Development
 - Added staged instruction transfer between IF and ID stages
 - Added self-checking IF/ID pipeline register testbench
 
+### Day 8
+- Implemented ID/EX pipeline register
+- Added pipelined datapath/control signal propagation
+- Separated decode and execute stages
+- Added self-checking ID/EX pipeline verification
+
 ---
 
 ## Current Supported Instructions
