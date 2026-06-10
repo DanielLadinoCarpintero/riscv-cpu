@@ -132,7 +132,7 @@ Future enhancements include forwarding, hazard detection, branch flushing, asser
 ![Memory Integrated Datapath](docs/diagrams/single_cycle_cpu_with_memory.jpg)
 
 ### 5-Stage Pipeline Skeleton
-![Pipeline Skeleton](docs/diagrams/pipeline_skeleton.jpg)
+![Pipeline Skeleton](docs/diagrams/final_cpu.jpg)
 
 ---
 
