@@ -4,7 +4,7 @@
 ---
 
 ## Status
-✅ Completed Portfolio Version
+Completed Portfolio Version
 
 Future enhancements include forwarding, hazard detection, branch flushing, assertions, and constrained-random verification.
 
@@ -199,5 +199,4 @@ docs/
 
 ---
 
-## Resume Summary
-Designed and verified a modular 32-bit RV32I RISC-V processor in SystemVerilog featuring instruction/data memory subsystems, self-checking ModelSim testbenches, and a 5-stage pipelined architecture skeleton.
+
