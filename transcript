@@ -1,0 +1,652 @@
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.instr_mem_tb
+# vsim -gui work.instr_mem_tb 
+# Start time: 15:47:50 on May 30,2026
+# Loading sv_std.std
+# Loading work.instr_mem_tb
+# Loading work.instr_mem
+add wave -position insertpoint  \
+sim:/instr_mem_tb/addr \
+sim:/instr_mem_tb/instruction
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftsixx60".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftsixx60
+run -all
+# PASS: Fetched instruction 0
+# PASS: Fetched instruction 1
+# PASS: Fetched instruction 2
+# ====================================
+# All instruction memory tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv(77)
+#    Time: 3 ns  Iteration: 0  Instance: /instr_mem_tb
+# Break in Module instr_mem_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv line 77
+quit -sim
+# End time: 15:49:31 on May 30,2026, Elapsed time: 0:01:41
+# Errors: 0, Warnings: 2
+vsim -gui work.pc_tb
+# vsim -gui work.pc_tb 
+# Start time: 15:49:43 on May 30,2026
+# Loading sv_std.std
+# Loading work.pc_tb
+# Loading work.pc
+add wave -position insertpoint  \
+sim:/pc_tb/clk \
+sim:/pc_tb/rst \
+sim:/pc_tb/next_pc \
+sim:/pc_tb/current_pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlft5fy1ky".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft5fy1ky
+run -all
+# ERROR: PC mismatch
+# Expected = 0, Got = x
+# ** Fatal: Assertion error.
+#    Time: 5 ns  Scope: pc_tb.check_pc File: C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv Line: 32
+# ** Note: $finish    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv(32)
+#    Time: 5 ns  Iteration: 1  Instance: /pc_tb
+# 1
+# Break in Task check_pc at C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv line 32
+quit -sim
+# End time: 15:51:31 on May 30,2026, Elapsed time: 0:01:48
+# Errors: 1, Warnings: 2
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.pc_tb
+# vsim -gui work.pc_tb 
+# Start time: 15:51:53 on May 30,2026
+# Loading sv_std.std
+# Loading work.pc_tb
+# Loading work.pc
+add wave -position insertpoint  \
+sim:/pc_tb/clk \
+sim:/pc_tb/rst \
+sim:/pc_tb/next_pc \
+sim:/pc_tb/current_pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlft4ygbkr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4ygbkr
+run -all
+# PASS: PC = 0
+# PASS: PC = 4
+# PASS: PC = 8
+# PASS: PC = 12
+# ====================================
+# All PC tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv(99)
+#    Time: 36 ns  Iteration: 0  Instance: /pc_tb
+# Break in Module pc_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv line 99
+quit -sim
+# End time: 16:06:30 on May 30,2026, Elapsed time: 0:14:37
+# Errors: 0, Warnings: 2
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# 11 compiles, 1 failed with no errors.
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# 12 compiles, 0 failed with no errors.
+vsim -gui work.control_unit_tb
+# vsim -gui work.control_unit_tb 
+# Start time: 16:08:30 on May 30,2026
+# Loading sv_std.std
+# Loading work.control_unit_tb
+# Loading work.control_unit
+add wave -position insertpoint  \
+sim:/control_unit_tb/opcode \
+sim:/control_unit_tb/reg_write \
+sim:/control_unit_tb/alu_src \
+sim:/control_unit_tb/mem_read \
+sim:/control_unit_tb/mem_write \
+sim:/control_unit_tb/mem_to_reg \
+sim:/control_unit_tb/branch \
+sim:/control_unit_tb/alu_op
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlft2vxvjk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2vxvjk
+run -all
+# PASS: R-Type decode
+# PASS: ADDI decode
+# PASS: LW decode
+# PASS: SW decode
+# PASS: BEQ decode
+# ====================================
+# All control unit tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv(131)
+#    Time: 5 ns  Iteration: 0  Instance: /control_unit_tb
+# Break in Module control_unit_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv line 131
+quit -sim
+# End time: 16:10:13 on May 30,2026, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 2
+vsim -gui work.imm_gen_tb
+# vsim -gui work.imm_gen_tb 
+# Start time: 16:10:22 on May 30,2026
+# Loading sv_std.std
+# Loading work.imm_gen_tb
+# Loading work.imm_gen
+add wave -position insertpoint  \
+sim:/imm_gen_tb/instruction \
+sim:/imm_gen_tb/immediate
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftjqk777".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjqk777
+run -all
+# PASS: I-Type immediate
+# PASS: S-Type immediate
+# ====================================
+# All immediate generator tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv(66)
+#    Time: 2 ns  Iteration: 0  Instance: /imm_gen_tb
+# Break in Module imm_gen_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv line 66
+quit -sim
+# End time: 16:12:44 on May 30,2026, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 2
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.cpu_tb
+# vsim -gui work.cpu_tb 
+# Start time: 16:24:15 on May 30,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+add wave -position insertpoint sim:/cpu_tb/dut/pc_inst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftcqbe3s".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcqbe3s
+add wave -position insertpoint sim:/cpu_tb/dut/instr_mem_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/regfile_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/imm_gen_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/control_unit_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/alu_control_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/alu_inst/*
+run -all
+# ====================================
+# CPU EXECUTION SUCCESSFUL
+# x1 = 5
+# x2 = 10
+# x3 = 15
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(58)
+#    Time: 120 ns  Iteration: 0  Instance: /cpu_tb
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 58
+quit -sim
+# End time: 17:16:07 on May 30,2026, Elapsed time: 0:51:52
+# Errors: 0, Warnings: 2
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of data_mem.sv was successful.
+# 17 compiles, 0 failed with no errors.
+vsim -gui work.data_mem_tb
+# vsim -gui work.data_mem_tb 
+# Start time: 17:19:37 on May 30,2026
+# Loading sv_std.std
+# Loading work.data_mem_tb
+# Loading work.data_mem
+add wave -position insertpoint  \
+sim:/data_mem_tb/clk \
+sim:/data_mem_tb/mem_read \
+sim:/data_mem_tb/mem_write \
+sim:/data_mem_tb/addr \
+sim:/data_mem_tb/write_data \
+sim:/data_mem_tb/read_data
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlfthz0a0w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfthz0a0w
+run -all
+# PASS: Memory read/write
+# PASS: Second memory read/write
+# ====================================
+# All data memory tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv(120)
+#    Time: 36 ns  Iteration: 0  Instance: /data_mem_tb
+# Break in Module data_mem_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv line 120
+quit -sim
+# End time: 17:21:56 on May 30,2026, Elapsed time: 0:02:19
+# Errors: 0, Warnings: 2
+vsim -gui work.cpu_tb
+# vsim -gui work.cpu_tb 
+# Start time: 17:22:10 on May 30,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.data_mem
+add wave -position insertpoint sim:/cpu_tb/dut/pc_inst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftfggvyx".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfggvyx
+add wave -position insertpoint sim:/cpu_tb/dut/instr_mem_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/regfile_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/imm_gen_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/control_unit_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/alu_control_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/alu_inst/*
+add wave -position insertpoint sim:/cpu_tb/dut/data_mem_inst/*
+add wave -position insertpoint  \
+sim:/cpu_tb/clk \
+sim:/cpu_tb/rst
+run -all
+# ====================================
+# CPU EXECUTION SUCCESSFUL
+# x1 = 5
+# x2 = 10
+# x3 = 15
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(58)
+#    Time: 170 ns  Iteration: 0  Instance: /cpu_tb
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 58
+quit -sim
+# End time: 17:26:07 on May 30,2026, Elapsed time: 0:03:57
+# Errors: 0, Warnings: 2
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of data_mem.sv was successful.
+# 17 compiles, 0 failed with no errors.
+vsim -gui work.cpu_tb
+# vsim -gui work.cpu_tb 
+# Start time: 17:27:23 on May 30,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.data_mem
+run -all
+# ====================================
+# CPU EXECUTION SUCCESSFUL
+# x1 = 100
+# x2 = 42
+# x3 = 42
+# MEM[100] = 42
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(66)
+#    Time: 170 ns  Iteration: 0  Instance: /cpu_tb
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 66
+quit -sim
+# End time: 17:55:30 on May 30,2026, Elapsed time: 0:28:07
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of if_id.sv was successful.
+# Compile of if_id_tb.sv was successful.
+# 19 compiles, 0 failed with no errors.
+vsim -gui work.if_id_tb
+# vsim -gui work.if_id_tb 
+# Start time: 17:56:12 on May 30,2026
+# Loading sv_std.std
+# Loading work.if_id_tb
+# Loading work.if_id
+add wave -position insertpoint  \
+sim:/if_id_tb/dut/clk \
+sim:/if_id_tb/dut/rst \
+sim:/if_id_tb/dut/if_pc \
+sim:/if_id_tb/dut/if_instruction \
+sim:/if_id_tb/dut/id_pc \
+sim:/if_id_tb/dut/id_instruction
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftgh4ez3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgh4ez3
+run -all
+# ====================================
+# IF/ID pipeline register tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv(101)
+#    Time: 26 ns  Iteration: 0  Instance: /if_id_tb
+# Break in Module if_id_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv line 101
+quit -sim
+# End time: 17:58:02 on May 30,2026, Elapsed time: 0:01:50
+# Errors: 0, Warnings: 2
+vsim -gui work.cpu_tb
+# vsim -gui work.cpu_tb 
+# Start time: 17:58:11 on May 30,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.if_id
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.data_mem
+run -all
+# ====================================
+# CPU EXECUTION SUCCESSFUL
+# x1 = 100
+# x2 = 42
+# x3 = 42
+# MEM[100] = 42
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(66)
+#    Time: 170 ns  Iteration: 0  Instance: /cpu_tb
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 66
+quit -sim
+# End time: 16:07:58 on May 31,2026, Elapsed time: 22:09:47
+# Errors: 0, Warnings: 0
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of if_id.sv was successful.
+# Compile of if_id_tb.sv was successful.
+# Compile of id_ex_tb.sv was successful.
+# Compile of id_ex.sv was successful.
+# 21 compiles, 0 failed with no errors.
+vsim -gui work.id_ex_tb
+# vsim -gui work.id_ex_tb 
+# Start time: 16:09:42 on May 31,2026
+# Loading sv_std.std
+# Loading work.id_ex_tb
+# Loading work.id_ex
+add wave -position insertpoint  \
+sim:/id_ex_tb/clk \
+sim:/id_ex_tb/rst \
+sim:/id_ex_tb/id_pc \
+sim:/id_ex_tb/id_rs1_data \
+sim:/id_ex_tb/id_rs2_data \
+sim:/id_ex_tb/id_immediate \
+sim:/id_ex_tb/id_rd \
+sim:/id_ex_tb/id_reg_write \
+sim:/id_ex_tb/id_alu_src \
+sim:/id_ex_tb/id_mem_read \
+sim:/id_ex_tb/id_mem_write \
+sim:/id_ex_tb/id_mem_to_reg \
+sim:/id_ex_tb/id_branch \
+sim:/id_ex_tb/id_alu_op \
+sim:/id_ex_tb/ex_pc \
+sim:/id_ex_tb/ex_rs1_data \
+sim:/id_ex_tb/ex_rs2_data \
+sim:/id_ex_tb/ex_immediate \
+sim:/id_ex_tb/ex_rd \
+sim:/id_ex_tb/ex_reg_write \
+sim:/id_ex_tb/ex_alu_src \
+sim:/id_ex_tb/ex_mem_read \
+sim:/id_ex_tb/ex_mem_write \
+sim:/id_ex_tb/ex_mem_to_reg \
+sim:/id_ex_tb/ex_branch \
+sim:/id_ex_tb/ex_alu_op
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftayvgkj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftayvgkj
+run -all
+# ====================================
+# ID/EX pipeline register tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv(186)
+#    Time: 16 ns  Iteration: 0  Instance: /id_ex_tb
+# Break in Module id_ex_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv line 186
+quit -sim
+# End time: 16:12:14 on May 31,2026, Elapsed time: 0:02:32
+# Errors: 0, Warnings: 2
+vsim -gui work.cpu_tb
+# vsim -gui work.cpu_tb 
+# Start time: 16:12:29 on May 31,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.if_id
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.id_ex
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.data_mem
+run -all
+# ERROR: x3 incorrect
+# ** Fatal: Assertion error.
+#    Time: 170 ns  Scope: cpu_tb File: C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv Line: 48
+# ** Note: $finish    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(48)
+#    Time: 170 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 48
+quit -sim
+# End time: 16:21:29 on May 31,2026, Elapsed time: 0:09:00
+# Errors: 1, Warnings: 0
+# Compile of alu.sv was successful.
+# Compile of alu_tb.sv was successful.
+# Compile of regfile.sv was successful.
+# Compile of regfile_tb.sv was successful.
+# Compile of pc.sv was successful.
+# Compile of pc_tb.sv was successful.
+# Compile of instr_mem_tb.sv was successful.
+# Compile of control_unit.sv was successful.
+# Compile of imm_gen.sv was successful.
+# Compile of control_unit_tb.sv was successful.
+# Compile of imm_gen_tb.sv was successful.
+# Compile of instr_mem.sv was successful.
+# Compile of cpu_top.sv was successful.
+# Compile of alu_control.sv was successful.
+# Compile of cpu_tb.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of data_mem.sv was successful.
+# Compile of if_id.sv was successful.
+# Compile of if_id_tb.sv was successful.
+# Compile of id_ex_tb.sv was successful.
+# Compile of id_ex.sv was successful.
+# Compile of ex_mem.sv was successful.
+# Compile of ex_mem_tb.sv was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.ex_mem_tb
+# vsim -gui work.ex_mem_tb 
+# Start time: 16:23:32 on May 31,2026
+# Loading sv_std.std
+# Loading work.ex_mem_tb
+# Loading work.ex_mem
+add wave -position insertpoint  \
+sim:/ex_mem_tb/clk \
+sim:/ex_mem_tb/rst \
+sim:/ex_mem_tb/ex_alu_result \
+sim:/ex_mem_tb/ex_rs2_data \
+sim:/ex_mem_tb/ex_rd \
+sim:/ex_mem_tb/ex_reg_write \
+sim:/ex_mem_tb/ex_mem_read \
+sim:/ex_mem_tb/ex_mem_write \
+sim:/ex_mem_tb/ex_mem_to_reg \
+sim:/ex_mem_tb/mem_alu_result \
+sim:/ex_mem_tb/mem_rs2_data \
+sim:/ex_mem_tb/mem_rd \
+sim:/ex_mem_tb/mem_reg_write \
+sim:/ex_mem_tb/mem_mem_read \
+sim:/ex_mem_tb/mem_mem_write \
+sim:/ex_mem_tb/mem_mem_to_reg
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: danie  Hostname: DANIEL  ProcessID: 45424
+#           Attempting to use alternate WLF file "./wlftq3vh5i".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftq3vh5i
+run -all
+# ====================================
+# EX/MEM pipeline register tests passed!
+# ====================================
+# ** Note: $stop    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv(145)
+#    Time: 16 ns  Iteration: 0  Instance: /ex_mem_tb
+# Break in Module ex_mem_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv line 145
+vsim -gui work.cpu_tb
+# End time: 16:26:54 on May 31,2026, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 2
+# vsim -gui work.cpu_tb 
+# Start time: 16:26:54 on May 31,2026
+# Loading sv_std.std
+# Loading work.cpu_tb
+# Loading work.cpu_top
+# Loading work.pc
+# Loading work.instr_mem
+# Loading work.if_id
+# Loading work.regfile
+# Loading work.imm_gen
+# Loading work.id_ex
+# Loading work.control_unit
+# Loading work.alu_control
+# Loading work.alu
+# Loading work.ex_mem
+# Loading work.data_mem
+run -all
+# ERROR: x3 incorrect
+# ** Fatal: Assertion error.
+#    Time: 170 ns  Scope: cpu_tb File: C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv Line: 48
+# ** Note: $finish    : C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv(48)
+#    Time: 170 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv line 48
+# End time: 15:11:34 on Jun 07,2026, Elapsed time: 166:44:40
+# Errors: 1, Warnings: 0

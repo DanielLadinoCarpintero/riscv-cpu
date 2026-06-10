@@ -10,49 +10,553 @@ cModel Technology
 dC:/Users/danie/Downloads/Digital Design EEL4712 Labs/lab-6-DanielLadinoCarpintero
 valu
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-!s110 1779842450
+Z1 !s110 1780258966
 !i10b 1
 !s100 6n1^z7WMK^?7zVC9`>FY33
 I7XHob5@HCM2BHcJ4K7O2>2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 alu_sv_unit
 S1
-Z2 dC:/Users/danie/Downloads/riscv-cpu
+Z3 dC:/Users/danie/Downloads/riscv-cpu
 w1779842290
 8C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv
 FC:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv
 L0 1
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1779842450.000000
+Z5 !s108 1780258966.000000
 !s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/alu.sv|
 !i113 1
-Z4 o-work work -sv
-Z5 tCvgOpt 0
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+valu_control
+R0
+Z8 !s110 1780258967
+!i10b 1
+!s100 7EBfI8;gLTK[i1dh:Tn>:1
+IGa=F[5U`lB6TZa``S<88E3
+R2
+!s105 alu_control_sv_unit
+S1
+R3
+w1780172457
+8C:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv
+L0 1
+R4
+r1
+!s85 0
+31
+Z9 !s108 1780258967.000000
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv|
+!i113 1
+R6
+R7
 valu_tb
 R0
-!s110 1779842451
+R1
 !i10b 1
 !s100 Fm3?QOQhEKS4bcaeROig23
 IBoo8l?;^>KME[aI0Ug6HK0
-R1
+R2
 !s105 alu_tb_sv_unit
 S1
-R2
+R3
 w1779842363
 8C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv
 FC:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-!s108 1779842451.000000
+R5
 !s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/alu_tb.sv|
 !i113 1
+R6
+R7
+vcontrol_unit
+R0
+R1
+!i10b 1
+!s100 XS7TJ@aT7A;Bj[Q<XBS`?3
+Il7DTHDeVTn[a6PZ?KM10b1
+R2
+!s105 control_unit_sv_unit
+S1
+R3
+w1780171282
+8C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv
+L0 1
 R4
+r1
+!s85 0
+31
 R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv|
+!i113 1
+R6
+R7
+vcontrol_unit_tb
+R0
+R1
+!i10b 1
+!s100 8MC>Q32XIQ=0T<fcVXifh0
+ILMTF=Lh:OF9[L^=<eM<d;3
+R2
+!s105 control_unit_tb_sv_unit
+S1
+R3
+w1780171326
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/control_unit_tb.sv|
+!i113 1
+R6
+R7
+vcpu_tb
+R0
+R8
+!i10b 1
+!s100 FY<8diL?a844KT_:`EGZc1
+IgLd`NJh?<n0KJeaTCB[`Z0
+R2
+!s105 cpu_tb_sv_unit
+S1
+R3
+w1780176419
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv|
+!i113 1
+R6
+R7
+vcpu_top
+R0
+R8
+!i10b 1
+!s100 efD24[Hf>CUB4:k]aFi]L0
+I^d0Ykj0LCG]WX5:dGdUA[2
+R2
+!s105 cpu_top_sv_unit
+S1
+R3
+w1780258866
+8C:/Users/danie/Downloads/riscv-cpu/rtl/core/cpu_top.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/core/cpu_top.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/cpu_top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/cpu_top.sv|
+!i113 1
+R6
+R7
+vdata_mem
+R0
+R8
+!i10b 1
+!s100 R1SAM7cleU^h:n^^8F6eF1
+ILGX39ccIWVPEYd_DJOW>h2
+R2
+Z10 !s105 data_mem_sv_unit
+S1
+R3
+w1780175633
+8C:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv|
+!i113 1
+R6
+R7
+vdata_mem_tb
+R0
+R8
+!i10b 1
+!s100 B;0beZXkdFX^`Wg7a[l:60
+IgRlD>U7:ma`K5hD1ZjfAC1
+R2
+R10
+S1
+R3
+w1780175660
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/data_mem.sv|
+!i113 1
+R6
+R7
+vex_mem
+R0
+R8
+!i10b 1
+!s100 ^IXkH0`_0nzV86@YIPVUH0
+IANN8FLKoEeiOla;;TXQjM0
+R2
+!s105 ex_mem_sv_unit
+S1
+R3
+w1780258733
+8C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv|
+!i113 1
+R6
+R7
+vex_mem_tb
+R0
+!s110 1780258968
+!i10b 1
+!s100 j`U9FBQ>K7Mk^A?YQ^Bnl0
+ILzb5=P4?CR8P3R>7P1MjA3
+R2
+!s105 ex_mem_tb_sv_unit
+S1
+R3
+w1780258754
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1780258968.000000
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv|
+!i113 1
+R6
+R7
+vid_ex
+R0
+R8
+!i10b 1
+!s100 ?aG5[`VfJD34::FCI5Pk@0
+Izgne]^Kl6kMXW=GAm>^5>0
+R2
+!s105 id_ex_sv_unit
+S1
+R3
+w1780257796
+8C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/id_ex.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/id_ex.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/id_ex.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/id_ex.sv|
+!i113 1
+R6
+R7
+vid_ex_tb
+R0
+R8
+!i10b 1
+!s100 MJk9bBNGM<24nBOV76<hV1
+I[g9feJ@NKB7J87@Z3Kk5l2
+R2
+!s105 id_ex_tb_sv_unit
+S1
+R3
+w1780257838
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/id_ex_tb.sv|
+!i113 1
+R6
+R7
+vif_id
+R0
+R8
+!i10b 1
+!s100 5^P`<?c;UhBJD1OF=1;Kb1
+I^RZ<Sbh7>Y;lPO26UW]cJ2
+R2
+!s105 if_id_sv_unit
+S1
+R3
+w1780178031
+8C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv|
+!i113 1
+R6
+R7
+vif_id_tb
+R0
+R8
+!i10b 1
+!s100 QXkh:faFOB11=I`i<nSAJ2
+Ia`[3>UPbUYU1ZU58PHF9o0
+R2
+!s105 if_id_tb_sv_unit
+S1
+R3
+w1780178054
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/if_id_tb.sv|
+!i113 1
+R6
+R7
+vimm_gen
+R0
+R1
+!i10b 1
+!s100 G[gCWm19omBYfzKZ1lZSD3
+IV6Po0KKh1Va8PzV:7ED<51
+R2
+!s105 imm_gen_sv_unit
+S1
+R3
+w1780171443
+8C:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv|
+!i113 1
+R6
+R7
+vimm_gen_tb
+R0
+R8
+!i10b 1
+!s100 LK`[]IPNDJR:7SK0HCGLh3
+IRL0IURdESLWEV;cRnKAdU0
+R2
+!s105 imm_gen_tb_sv_unit
+S1
+R3
+w1780171491
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/imm_gen_tb.sv|
+!i113 1
+R6
+R7
+vinstr_mem
+R0
+R8
+!i10b 1
+!s100 SUTjQOj7:88MQ=m0CkPK80
+IAdJ88HhF8I73UH]eZ73GJ2
+R2
+!s105 instr_mem_sv_unit
+S1
+R3
+w1780176404
+8C:/Users/danie/Downloads/riscv-cpu/rtl/memory/instr_mem.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/memory/instr_mem.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/memory/instr_mem.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/memory/instr_mem.sv|
+!i113 1
+R6
+R7
+vinstr_mem_tb
+R0
+R1
+!i10b 1
+!s100 W?j^MDn7_>zzzlfek=C_W1
+INe<8[^A4<G23lAnXO=g4b3
+R2
+!s105 instr_mem_tb_sv_unit
+S1
+R3
+w1780170315
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv|
+!i113 1
+R6
+R7
+vpc
+R0
+R1
+!i10b 1
+!s100 ^GkJZM1ajkk=DZH=JfTG?2
+IbF7<nLIWdC4Am`<a8=gz?3
+R2
+!s105 pc_sv_unit
+S1
+R3
+w1780170101
+8C:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv|
+!i113 1
+R6
+R7
+vpc_tb
+R0
+R1
+!i10b 1
+!s100 1R`T5iXPeO:RXN1Sh4<0?0
+I<bS3b]XI2XYQde5f[LW1=0
+R2
+!s105 pc_tb_sv_unit
+S1
+R3
+w1780170677
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv|
+!i113 1
+R6
+R7
+vregfile
+R0
+R1
+!i10b 1
+!s100 h]foMH7mbF9jdbF1OaGHJ0
+IEaG;E<BhR>_O3FSF^K:cL1
+R2
+!s105 regfile_sv_unit
+S1
+R3
+w1779917967
+8C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv
+FC:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv|
+!i113 1
+R6
+R7
+vregfile_tb
+R0
+R1
+!i10b 1
+!s100 NMd4=441<WcA6;Z6H0[gJ2
+I7zlIX<_988d4=V7C;cQ<?1
+R2
+!s105 regfile_tb_sv_unit
+S1
+R3
+w1780169933
+8C:/Users/danie/Downloads/riscv-cpu/tb/tests/regfile_tb.sv
+FC:/Users/danie/Downloads/riscv-cpu/tb/tests/regfile_tb.sv
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/danie/Downloads/riscv-cpu/tb/tests/regfile_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/danie/Downloads/riscv-cpu/tb/tests/regfile_tb.sv|
+!i113 1
+R6
+R7

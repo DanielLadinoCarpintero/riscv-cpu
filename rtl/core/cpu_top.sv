@@ -19,6 +19,38 @@ module cpu_top (
     logic [31:0] id_pc;
     logic [31:0] id_instruction;
 
+    // ID/EX Pipeline Signals
+
+    logic [31:0] ex_pc;
+
+    logic [31:0] ex_rs1_data;
+    logic [31:0] ex_rs2_data;
+
+    logic [31:0] ex_immediate;
+
+    logic [4:0] ex_rd;
+
+    logic       ex_reg_write;
+    logic       ex_alu_src;
+    logic       ex_mem_read;
+    logic       ex_mem_write;
+    logic       ex_mem_to_reg;
+    logic       ex_branch;
+
+    logic [1:0] ex_alu_op;
+
+    // EX/MEM Pipeline Signals
+
+    logic [31:0] mem_alu_result;
+    logic [31:0] mem_rs2_data;
+
+    logic [4:0] mem_rd;
+
+    logic       mem_reg_write;
+    logic       mem_mem_read;
+    logic       mem_mem_write;
+    logic       mem_mem_to_reg;
+
     // Instruction Fields
 
     logic [6:0] opcode;
@@ -78,12 +110,13 @@ module cpu_top (
 
     // ALU Source Mux
 
-    assign alu_b = (alu_src) ? immediate : rs2_data;
+    assign alu_b =
+        (ex_alu_src) ? ex_immediate : ex_rs2_data;
 
     // Writeback Mux
 
     assign writeback_data =
-        (mem_to_reg) ? mem_read_data : alu_result;
+        (mem_mem_to_reg) ? mem_read_data : mem_alu_result;
 
     // Program Counter
 
@@ -122,12 +155,12 @@ module cpu_top (
         .clk(clk),
         .rst(rst),
 
-        .we(reg_write),
+        .we(mem_reg_write),
 
         .rs1_addr(rs1),
         .rs2_addr(rs2),
 
-        .rd_addr(rd),
+        .rd_addr(mem_rd),
 
         .rd_data(writeback_data),
 
@@ -140,6 +173,51 @@ module cpu_top (
     imm_gen imm_gen_inst (
         .instruction(id_instruction),
         .immediate(immediate)
+    );
+
+    // ID/EX Pipeline Register
+
+    id_ex id_ex_inst (
+
+        .clk(clk),
+        .rst(rst),
+
+        .id_pc(id_pc),
+
+        .id_rs1_data(rs1_data),
+        .id_rs2_data(rs2_data),
+
+        .id_immediate(immediate),
+
+        .id_rd(rd),
+
+        .id_reg_write(reg_write),
+        .id_alu_src(alu_src),
+        .id_mem_read(mem_read),
+        .id_mem_write(mem_write),
+        .id_mem_to_reg(mem_to_reg),
+        .id_branch(branch),
+
+        .id_alu_op(alu_op),
+
+        .ex_pc(ex_pc),
+
+        .ex_rs1_data(ex_rs1_data),
+        .ex_rs2_data(ex_rs2_data),
+
+        .ex_immediate(ex_immediate),
+
+        .ex_rd(ex_rd),
+
+        .ex_reg_write(ex_reg_write),
+        .ex_alu_src(ex_alu_src),
+        .ex_mem_read(ex_mem_read),
+        .ex_mem_write(ex_mem_write),
+        .ex_mem_to_reg(ex_mem_to_reg),
+        .ex_branch(ex_branch),
+
+        .ex_alu_op(ex_alu_op)
+
     );
 
     // Control Unit
@@ -160,7 +238,7 @@ module cpu_top (
     // ALU Control
 
     alu_control alu_control_inst (
-        .alu_op(alu_op),
+        .alu_op(ex_alu_op),
         .funct3(funct3),
         .funct7(funct7),
 
@@ -170,12 +248,41 @@ module cpu_top (
     // ALU
 
     alu alu_inst (
-        .a(rs1_data),
+        .a(ex_rs1_data),
         .b(alu_b),
         .alu_sel(alu_sel),
 
         .result(alu_result),
         .zero(zero)
+    );
+
+    // EX/MEM Pipeline Register
+
+    ex_mem ex_mem_inst (
+
+        .clk(clk),
+        .rst(rst),
+
+        .ex_alu_result(alu_result),
+        .ex_rs2_data(ex_rs2_data),
+
+        .ex_rd(ex_rd),
+
+        .ex_reg_write(ex_reg_write),
+        .ex_mem_read(ex_mem_read),
+        .ex_mem_write(ex_mem_write),
+        .ex_mem_to_reg(ex_mem_to_reg),
+
+        .mem_alu_result(mem_alu_result),
+        .mem_rs2_data(mem_rs2_data),
+
+        .mem_rd(mem_rd),
+
+        .mem_reg_write(mem_reg_write),
+        .mem_mem_read(mem_mem_read),
+        .mem_mem_write(mem_mem_write),
+        .mem_mem_to_reg(mem_mem_to_reg)
+
     );
 
     // Data Memory
@@ -184,12 +291,12 @@ module cpu_top (
 
         .clk(clk),
 
-        .mem_read(mem_read),
-        .mem_write(mem_write),
+        .mem_read(mem_mem_read),
+        .mem_write(mem_mem_write),
 
-        .addr(alu_result),
+        .addr(mem_alu_result),
 
-        .write_data(rs2_data),
+        .write_data(mem_rs2_data),
 
         .read_data(mem_read_data)
 
