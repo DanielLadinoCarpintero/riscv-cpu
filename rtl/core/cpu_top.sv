@@ -51,6 +51,16 @@ module cpu_top (
     logic       mem_mem_write;
     logic       mem_mem_to_reg;
 
+    // MEM/WB Pipeline Signals
+
+    logic [31:0] wb_alu_result;
+    logic [31:0] wb_read_data;
+
+    logic [4:0] wb_rd;
+
+    logic       wb_reg_write;
+    logic       wb_mem_to_reg;
+
     // Instruction Fields
 
     logic [6:0] opcode;
@@ -116,7 +126,7 @@ module cpu_top (
     // Writeback Mux
 
     assign writeback_data =
-        (mem_mem_to_reg) ? mem_read_data : mem_alu_result;
+        (wb_mem_to_reg) ? wb_read_data : wb_alu_result;
 
     // Program Counter
 
@@ -155,12 +165,12 @@ module cpu_top (
         .clk(clk),
         .rst(rst),
 
-        .we(mem_reg_write),
+        .we(wb_reg_write),
 
         .rs1_addr(rs1),
         .rs2_addr(rs2),
 
-        .rd_addr(mem_rd),
+        .rd_addr(wb_rd),
 
         .rd_data(writeback_data),
 
@@ -299,6 +309,31 @@ module cpu_top (
         .write_data(mem_rs2_data),
 
         .read_data(mem_read_data)
+
+    );
+
+    // MEM/WB Pipeline Register
+
+    mem_wb mem_wb_inst (
+
+        .clk(clk),
+        .rst(rst),
+
+        .mem_alu_result(mem_alu_result),
+        .mem_read_data(mem_read_data),
+
+        .mem_rd(mem_rd),
+
+        .mem_reg_write(mem_reg_write),
+        .mem_mem_to_reg(mem_mem_to_reg),
+
+        .wb_alu_result(wb_alu_result),
+        .wb_read_data(wb_read_data),
+
+        .wb_rd(wb_rd),
+
+        .wb_reg_write(wb_reg_write),
+        .wb_mem_to_reg(wb_mem_to_reg)
 
     );
 

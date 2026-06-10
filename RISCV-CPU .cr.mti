@@ -19,6 +19,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	regfile_tb
 
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/mem_wb_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/mem_wb_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mem_wb_tb
+
+Top level modules:
+	mem_wb_tb
+
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/control/alu_control.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module alu_control
@@ -33,13 +40,6 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	alu
 
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/cpu_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module cpu_tb
-
-Top level modules:
-	cpu_tb
-
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/core/pc.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module pc
@@ -47,12 +47,33 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	pc
 
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/mem_wb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/mem_wb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mem_wb
+
+Top level modules:
+	mem_wb
+
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/core/imm_gen.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module imm_gen
 
 Top level modules:
 	imm_gen
+
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pc_tb
+
+Top level modules:
+	pc_tb
+
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regfile
+
+Top level modules:
+	regfile
 
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/ex_mem_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -82,33 +103,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	data_mem_tb
 
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/core/regfile.sv
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module regfile
+-- Compiling module control_unit
 
 Top level modules:
-	regfile
-
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/pc_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module pc_tb
-
-Top level modules:
-	pc_tb
-
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ex_mem
-
-Top level modules:
-	ex_mem
-
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module if_id
-
-Top level modules:
-	if_id
+	control_unit
 
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/memory/data_mem.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -117,12 +117,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	data_mem
 
-} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/control/control_unit.sv
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/if_id.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module control_unit
+-- Compiling module if_id
 
 Top level modules:
-	control_unit
+	if_id
+
+} {} {}} C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/rtl/pipeline/ex_mem.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ex_mem
+
+Top level modules:
+	ex_mem
 
 } {} {}} C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv {1 {vlog -work work -sv -stats=none C:/Users/danie/Downloads/riscv-cpu/tb/tests/instr_mem_tb.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

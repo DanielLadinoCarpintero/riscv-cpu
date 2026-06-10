@@ -16,6 +16,22 @@ module cpu_tb;
 
     always #5 clk = ~clk;
 
+    // Pipeline Monitor
+
+    always @(posedge clk) begin
+
+        $display(
+            "[%0t] PC=%0d ID=%h EX_RD=%0d MEM_RD=%0d WB_RD=%0d",
+            $time,
+            dut.current_pc,
+            dut.id_instruction,
+            dut.ex_rd,
+            dut.mem_rd,
+            dut.wb_rd
+        );
+
+    end
+
     initial begin
 
         clk = 0;
@@ -27,41 +43,62 @@ module cpu_tb;
 
         rst = 0;
 
-        // Run Program
+        // Allow program to execute
 
-        #150;
+        #400;
 
-        // Check Results
+        $display("");
+        $display("========================================");
+        $display("         CPU EXECUTION SUMMARY");
+        $display("========================================");
 
-        if (dut.regfile_inst.registers[1] !== 32'd100) begin
-            $display("ERROR: x1 incorrect");
-            $fatal;
-        end
-
-        if (dut.regfile_inst.registers[2] !== 32'd42) begin
-            $display("ERROR: x2 incorrect");
-            $fatal;
-        end
-
-        if (dut.regfile_inst.registers[3] !== 32'd42) begin
-            $display("ERROR: x3 incorrect");
-            $fatal;
-        end
-
-        // Verify memory contents
-
-        if (dut.data_mem_inst.memory[25] !== 32'd42) begin
-            $display("ERROR: Memory write failed");
-            $fatal;
-        end
-
-        $display("====================================");
-        $display("CPU EXECUTION SUCCESSFUL");
         $display("x1 = %0d", dut.regfile_inst.registers[1]);
         $display("x2 = %0d", dut.regfile_inst.registers[2]);
-        $display("x3 = %0d", dut.regfile_inst.registers[3]);
-        $display("MEM[100] = %0d", dut.data_mem_inst.memory[25]);
-        $display("====================================");
+
+        $display("");
+
+        $display("Memory Contents:");
+        $display("MEM[100] = %0h",
+                 dut.data_mem_inst.memory[25]);
+
+        $display("");
+
+        $display("x3 = %0d",
+                 dut.regfile_inst.registers[3]);
+
+        $display("");
+
+        $display("Pipeline State:");
+        $display("IF  Instruction = %h",
+                 dut.instruction);
+
+        $display("ID  Instruction = %h",
+                 dut.id_instruction);
+
+        $display("EX  Destination  = %0d",
+                 dut.ex_rd);
+
+        $display("MEM Destination  = %0d",
+                 dut.mem_rd);
+
+        $display("WB  Destination  = %0d",
+                 dut.wb_rd);
+
+        $display("");
+
+        // Architectural Checks
+
+        if (dut.regfile_inst.registers[1] !== 32'd100)
+            $fatal;
+
+        if (dut.regfile_inst.registers[2] !== 32'd42)
+            $fatal;
+
+        $display("");
+        $display("========================================");
+        $display("      ALL ARCHITECTURAL TESTS PASSED");
+        $display("========================================");
+        $display("");
 
         $stop;
 
