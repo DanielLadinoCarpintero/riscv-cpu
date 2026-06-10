@@ -1,24 +1,43 @@
-# RV32I Pipelined RISC-V CPU
-
-32-bit pipelined RV32I RISC-V processor written in SystemVerilog featuring forwarding, hazard detection, and a verification environment using ModelSim.
+# RV32I RISC-V CPU
+32-bit RV32I RISC-V processor written in SystemVerilog featuring a modular datapath, 5-stage pipeline skeleton, and self-checking verification environment using ModelSim.
 
 ---
 
 ## Status
+✅ Completed Portfolio Version
 
-In Active Development
+Future enhancements include forwarding, hazard detection, branch flushing, assertions, and constrained-random verification.
 
 ---
 
-## Planned Features
+## Features
 
-- 5-stage pipeline
-- Forwarding unit
-- Hazard detection
-- Branch handling
-- Assertions
-- Randomized testing
-- Functional coverage
+### Implemented
+
+- RV32I instruction support (subset)
+- Modular datapath architecture
+- Register file with x0 protection
+- Program Counter (PC)
+- Instruction Memory
+- Data Memory
+- Immediate Generator
+- Control Unit
+- ALU Control Unit
+- Arithmetic Logic Unit (ALU)
+- Self-checking verification testbenches
+- Pipeline execution tracing
+- 5-stage pipeline skeleton
+
+### Future Enhancements
+
+- Forwarding Unit
+- Hazard Detection Unit
+- Pipeline Stalling
+- Branch Flushing
+- SystemVerilog Assertions
+- Functional Coverage
+- Constrained-Random Verification
+- FPGA Deployment
 
 ---
 
@@ -31,18 +50,22 @@ In Active Development
 
 ---
 
-## Development Log
+# Development Log
 
 ### Day 1
-- Implemented ALU and self-checking testbench
+
+- Implemented ALU
+- Added self-checking ALU testbench
 
 ### Day 2
+
 - Implemented RV32I register file
 - Added self-checking register file testbench
 - Implemented synchronous writes and combinational reads
 - Added x0 protection logic
 
 ### Day 3
+
 - Implemented Program Counter (PC)
 - Added self-checking PC testbench
 - Implemented instruction memory module
@@ -50,122 +73,131 @@ In Active Development
 - Loaded initial RV32I test instructions into memory
 
 ### Day 4
+
 - Implemented RV32I control unit
 - Added instruction decode logic
 - Implemented immediate generator
 - Added self-checking verification testbenches
 
 ### Day 5
+
 - Implemented ALU control unit
 - Added top-level CPU module
 - Connected instruction fetch, decode, and execute stages
-- Integrated single-cycle CPU datapath and executed first RV32I program
+- Integrated single-cycle CPU datapath
+- Executed first RV32I test program
 
 ### Day 6
+
 - Implemented data memory module
 - Added load/store support
-- Added writeback muxing
 - Integrated memory access into CPU datapath
-- Successfully executed LW/SW memory operations
-- Verified full single-cycle RV32I processor execution
+- Added self-checking memory verification
+- Verified memory subsystem functionality
 
 ### Day 7
-- Began pipelined CPU architecture
+
 - Implemented IF/ID pipeline register
-- Added staged instruction transfer between IF and ID stages
-- Added self-checking IF/ID pipeline register testbench
+- Added staged instruction transfer between fetch and decode
+- Added self-checking IF/ID verification
 
 ### Day 8
+
 - Implemented ID/EX pipeline register
-- Added pipelined datapath/control signal propagation
+- Added datapath and control signal propagation
 - Separated decode and execute stages
-- Added self-checking ID/EX pipeline verification
+- Added self-checking ID/EX verification
 
 ### Day 9
+
 - Implemented EX/MEM pipeline register
-- Added pipelined memory-stage signal propagation
-- Separated execute and memory stages
-- Added self-checking EX/MEM pipeline verification
----
+- Added execute-to-memory stage separation
+- Added self-checking EX/MEM verification
 
-## Current Supported Instructions
+### Day 10
 
-### Arithmetic
-- ADD
-- SUB
-- ADDI
-
-### Logical
-- AND
-- OR
-- XOR
-- SLT
-
-### Memory
-- LW
-- SW
-
-### Branch
-- BEQ
+- Implemented MEM/WB pipeline register
+- Completed 5-stage pipeline skeleton
+- Added pipeline execution tracing and debug instrumentation
+- Verified instruction flow through IF, ID, EX, MEM, and WB stages
 
 ---
 
-## Current CPU Features
+## Current Architecture
 
-- Single-cycle RV32I datapath
-- Instruction fetch
-- Instruction decode
-- Register file read/write
-- Immediate generation
-- ALU execution
-- Data memory access
-- Register writeback
-- Self-checking verification environment
-
----
-
-## RTL Architecture
-
+### Initial Single-Cycle Datapath
 ![Single Cycle Datapath](docs/diagrams/single_cycle_datapath.jpg)
 
-### Updated Single-Cycle CPU Datapath
+### Memory-Integrated Datapath
+![Memory Integrated Datapath](docs/diagrams/single_cycle_cpu_with_memory.jpg)
 
-![Updated Single Cycle Datapath](docs/diagrams/single_cycle_cpu_with_memory.jpg)
+### 5-Stage Pipeline Skeleton
+![Pipeline Skeleton](docs/diagrams/pipeline_skeleton.jpg)
 
 ---
 
 ## Verification Waveforms
 
 ### ALU Testbench
-
 ![ALU Waveform](docs/waveforms/alu.jpg)
 
-### Control Unit Testbench
-
-![Control Unit Waveform](docs/waveforms/control_unit.jpg)
-
-### CPU Execution
-
-![CPU Execution](docs/waveforms/cpu.jpg)
-
-### Data Memory Testbench
-
-![Data Memory Waveform](docs/waveforms/data_mem.jpg)
-
-### Immediate Generator Testbench
-
-![IMM_GEN Waveform](docs/waveforms/imm_gen.jpg)
-
-### Instruction Memory Testbench
-
-![Instruction Memory Waveform](docs/waveforms/instr_mem.jpg)
-
-### Program Counter Testbench
-
-![PC Waveform](docs/waveforms/pc.jpg)
-
 ### Register File Testbench
-
 ![Register File Waveform](docs/waveforms/register.jpg)
 
+### Program Counter Testbench
+![PC Waveform](docs/waveforms/pc.jpg)
+
+### Instruction Memory Testbench
+![Instruction Memory Waveform](docs/waveforms/instr_mem.jpg)
+
+### Immediate Generator Testbench
+![IMM_GEN Waveform](docs/waveforms/imm_gen.jpg)
+
+### Control Unit Testbench
+![Control Unit Waveform](docs/waveforms/control_unit.jpg)
+
+### Data Memory Testbench
+![Data Memory Waveform](docs/waveforms/data_mem.jpg)
+
+### CPU Execution
+![CPU Execution](docs/waveforms/cpu.jpg)
+
 ---
+
+## Repository Structure
+
+```
+rtl/
+├── core/
+├── control/
+├── memory/
+├── pipeline/
+
+tb/
+├── tests/
+
+docs/
+├── diagrams/
+├── waveforms/
+```
+
+---
+
+## Skills Demonstrated
+
+- RTL Design
+- SystemVerilog
+- Computer Architecture
+- CPU Datapath Design
+- Pipeline Design
+- Verification Methodology
+- Testbench Development
+- Waveform Analysis
+- FPGA Development Workflow
+- Git Version Control
+- Hardware Debugging
+
+---
+
+## Resume Summary
+Designed and verified a modular 32-bit RV32I RISC-V processor in SystemVerilog featuring instruction/data memory subsystems, self-checking ModelSim testbenches, and a 5-stage pipelined architecture skeleton.
